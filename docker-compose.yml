@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  glitchtip:
+    image: glitchtip/glitchtip:latest
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_TYPE=postgres
+      - DB_HOST=postgres
+      - DB_NAME=glitchtip
+      - DB_USER=glitchtip
+      - DB_PASS=yourpassword
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: glitchtip
+      POSTGRES_USER: glitchtip
+      POSTGRES_PASSWORD: yourpassword
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+
