@@ -4,7 +4,7 @@ x-environment: &default-environment
   SECRET_KEY: eiChien4tohKaesh6aengud0oequeivood4OhveYaex2ahcoo5ieze2ici4Eequee3se9yahthaejuk3 # best to run openssl rand -hex 32
   PORT: 8000 # If changing, change the web service port too
   EMAIL_URL: consolemail:// # Example smtp://email:password@smtp_url:port https://glitchtip.com/documentation/install#configuration
-  GLITCHTIP_DOMAIN: http://localhost:8000 # Change this to your domain
+  GLITCHTIP_DOMAIN: http://192.168.1.26:8000 # Change this to your domain
   DEFAULT_FROM_EMAIL: email@example.com # Change this to your email
   CELERY_WORKER_AUTOSCALE: "1" # Scale between 1 and 3 to prevent excessive memory usage. Change it or remove to set it to the number of cpu cores.
 
